@@ -1,16 +1,304 @@
-# React + Vite
+Create a `README.md` file in your project root and paste this content:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```md
+# AI Task Management System
 
-Currently, two official plugins are available:
+An AI-powered Task Management System that helps users manage tasks, upload documents, perform semantic search, and monitor activities through an analytics dashboard.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The system combines **FastAPI backend**, **React frontend**, **MySQL database**, and **AI-based semantic search** to provide an intelligent task management experience.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Features
 
-## Expanding the ESLint configuration
+## Authentication
+- User registration and login
+- Role-based user management
+- Secure password handling
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Document Management
+- Upload documents
+- Store document details
+- Extract document information
+- Perform AI-powered semantic search
+
+## Semantic Search
+- Search documents using natural language queries
+- AI-based similarity matching using embeddings
+- Retrieve relevant document results
+
+## Task Management
+- Create tasks
+- Assign tasks to users
+- View assigned tasks
+- Track task status
+
+## Analytics Dashboard
+- Total documents count
+- Total tasks count
+- Activity tracking
+- Recent user activities
+
+## Activity Logs
+- Track user actions
+- Store timestamps of activities
+
+---
+
+# Tech Stack
+
+## Backend
+
+- Python
+- FastAPI
+- SQLAlchemy
+- MySQL
+- Pydantic
+- Sentence Transformers
+- Vector Database
+- Uvicorn
+
+## Frontend
+
+- React.js
+- Vite
+- JavaScript
+- Axios
+- React Router DOM
+- CSS
+
+## Database
+
+- MySQL
+
+## Tools
+
+- Git & GitHub
+- VS Code
+- Postman
+- Swagger API Documentation
+
+---
+
+# Project Structure
+
+```
+
+AI_Task_System
+
+│
+├── backend
+│   │
+│   ├── app
+│   │   ├── routes
+│   │   │   ├── auth.py
+│   │   │   ├── documents.py
+│   │   │   ├── search.py
+│   │   │   ├── tasks.py
+│   │   │   ├── analytics.py
+│   │   │   └── activity.py
+│   │   │
+│   │   ├── services
+│   │   │   ├── embedding.py
+│   │   │   ├── vector_db.py
+│   │   │   └── activity_logger.py
+│   │   │
+│   │   ├── database.py
+│   │   ├── models.py
+│   │   ├── schemas.py
+│   │   └── main.py
+│   │
+│   └── uploads
+│
+│
+└── frontend
+│
+├── src
+│   ├── api
+│   ├── components
+│   ├── pages
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── package.json
+└── vite.config.js
+
+````
+
+---
+
+# Installation and Setup
+
+## Clone Repository
+
+```bash
+git clone https://github.com/ManasaNeeli11/AI_Task_System.git
+````
+
+Move into project folder:
+
+```bash
+cd AI_Task_System
+```
+
+---
+
+# Backend Setup
+
+Go to backend:
+
+```bash
+cd backend
+```
+
+Create virtual environment:
+
+```bash
+python -m venv myenv
+```
+
+Activate environment:
+
+### Windows
+
+```bash
+myenv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run FastAPI server:
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Backend will run at:
+
+```
+http://127.0.0.1:8000
+```
+
+Swagger Documentation:
+
+```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+# Frontend Setup
+
+Open another terminal:
+
+```bash
+cd frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start React application:
+
+```bash
+npm run dev
+```
+
+Frontend will run at:
+
+```
+http://localhost:5173
+```
+
+---
+
+# API Endpoints
+
+## Authentication
+
+| Method | Endpoint         | Description   |
+| ------ | ---------------- | ------------- |
+| POST   | `/auth/register` | Register user |
+| POST   | `/auth/login`    | Login user    |
+
+---
+
+## Documents
+
+| Method | Endpoint            | Description     |
+| ------ | ------------------- | --------------- |
+| POST   | `/documents/upload` | Upload document |
+
+---
+
+## Semantic Search
+
+| Method | Endpoint          | Description      |
+| ------ | ----------------- | ---------------- |
+| GET    | `/search/?query=` | Search documents |
+
+---
+
+## Tasks
+
+| Method | Endpoint  | Description |
+| ------ | --------- | ----------- |
+| GET    | `/tasks/` | Get tasks   |
+| POST   | `/tasks/` | Create task |
+
+---
+
+## Analytics
+
+| Method | Endpoint      | Description    |
+| ------ | ------------- | -------------- |
+| GET    | `/analytics/` | View analytics |
+
+---
+
+## Activity
+
+| Method | Endpoint     | Description     |
+| ------ | ------------ | --------------- |
+| GET    | `/activity/` | View activities |
+
+---
+
+# Screenshots
+
+(Add application screenshots here)
+
+---
+
+# Future Enhancements
+
+* JWT authentication
+* Admin dashboard
+* Cloud deployment
+* Advanced AI document understanding
+* Email notifications
+* Real-time task updates
+
+---
+
+# Author
+
+**Manasa Neeli**
+
+GitHub:
+[https://github.com/ManasaNeeli11](https://github.com/ManasaNeeli11)
+
+---
+
+# License
+
+This project is developed for learning and demonstration purposes.
+
+````
