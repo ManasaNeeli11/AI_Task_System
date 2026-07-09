@@ -271,9 +271,23 @@ http://localhost:5173
 
 ---
 
-# Screenshots
+## Screenshots
 
-(Add application screenshots here)
+### Login Page
+
+![Login](screenshots/login.png)
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Upload Document
+
+![Upload](screenshots/upload.png)
+
+### Semantic Search
+
+![Search](screenshots/search.png)
 
 ---
 
